@@ -7,7 +7,7 @@
   <body>
     <div class="container">
       <header class="main-header">
-        <a href="index.html" class="main-logo"><img src="img/logo.png" width="138" height="70" alt="Логотип Седона"></a>
+        <a href="index.html" class="main-logo" aria-label="Главная страница"><img src="img/logo.png" width="138" height="70" alt="Логотип Седона"></a>
         <nav class="main-navigation">
           <ul class="site-navigation">
             <li><a href="#">Информация</a></li>
@@ -19,9 +19,46 @@
       </header>
       <main>
         <h1 class="visually-hidden">Бронирование жилья</h1>
-        <section class="reservation-form">
+
+        <section class="reservation">
           <h2 class="visually-hidden">Фильтр жилья</h2>
-          <!-- Место для формы -->
+
+          <form class="reservation-form" method="post" action="https://echo.htmlacademy.ru">
+            <fieldset class="hotel-comforts">
+              <legend>Инфраструктура:</legend>
+              <div class="reservation-item">
+                <input type="checkbox" name="pool" id="pool-checkbox" checked>
+                <label for="pool-checkbox">Бассейн</label>
+              </div>
+              <div class="reservation-item">
+                <input type="checkbox" name="parking" id="parking-checkbox">
+                <label for="parking-checkbox">Парковка</label>
+              </div>
+              <div class="reservation-item">
+                <input type="checkbox" name="wifi" id="wifi-checkbox">
+                <label for="wifi-checkbox">Wi-fi</label>
+              </div>
+            </fieldset>
+            <fieldset class="hotel-class">
+              <legend>Тип жилья:</legend>
+              <div class="reservation-item">
+                <input type="checkbox" name="hotel" id="hotel-checkbox" checked>
+                <label for="hotel-checkbox">Гостиница</label>
+              </div>
+              <div class="reservation-item">
+                <input type="checkbox" name="motel" id="motel-checkbox" checked>
+                <label for="motel-checkbox">Мотель</label>
+              </div>
+              <div class="reservation-item">
+                <input type="checkbox" name="apartments" id="apartments-checkbox" checked>
+                <label for="apartments-checkbox">Апартаменты</label>
+              </div>
+            </fieldset>
+            <fieldset class="hotel-filter">
+              <legend>Стоимость в&nbsp;сутки(р):</legend>
+              <!-- Место для фильтра жилья по стоимости -->
+            </fieldset>
+          </form>
         </section>
 
         <section class="hotels">
@@ -38,8 +75,8 @@
               <a href="#">По рейтингу</a>
             </li>
             <li class="hotels-order">
-              <a href="#" class="order-up"><span></span></a>
-              <a href="#" class="order-down"><span></span></a>
+              <a href="#" class="order-up"><span></span>По возрастанию</a>
+              <a href="#" class="order-down"><span></span>По убыванию</a>
             </li>
           </ul>
 
@@ -52,11 +89,11 @@
                 </h3>
                 <p class="hotels-type">Гостиница</p>
                 <p class="hotels-price">От&nbsp;4000р.</p>
-                <a href="#" type="button" class="details-btn">Подробнее</a>
-                <a href="#" type="button" class="reserve-btn">Забронировать</a>
+                <a href="#" class="details-btn">Подробнее</a>
+                <a href="#" class="reserve-btn">Забронировать</a>
               </div>
               <div class="hotels-rating">
-                <span class="rating-star"></span>
+                <span class="rating-star">Четыре звезды</span>
                 <p class="rating-number">Рейтинг: 8,5</p>
               </div>
             </li>
@@ -70,11 +107,11 @@
                 </h3>
                 <p class="hotels-type">Мотель</p>
                 <p class="hotels-price">От&nbsp;3000р.</p>
-                <a href="#" type="button" class="details-btn">Подробнее</a>
-                <a href="#" type="button" class="reserve-btn">Забронировать</a>
+                <a href="#" class="details-btn">Подробнее</a>
+                <a href="#" class="reserve-btn">Забронировать</a>
               </div>
               <div class="hotels-rating">
-                <span class="rating-star"></span>
+                <span class="rating-star">Три звезды</span>
                 <p class="rating-number">Рейтинг: 8,9</p>
               </div>
             </li>
@@ -88,11 +125,11 @@
                 </h3>
                 <p class="hotels-type">Апартаменты</p>
                 <p class="hotels-price">От&nbsp;2000р.</p>
-                <a href="#" type="button" class="details-btn">Подробнее</a>
-                <a href="#" type="button" class="reserve-btn">Забронировать</a>
+                <a href="#" class="details-btn">Подробнее</a>
+                <a href="#" class="reserve-btn">Забронировать</a>
               </div>
               <div class="hotels-rating">
-                <span class="rating-star"></span>
+                <span class="rating-star">Две звезды</span>
                 <p class="rating-number">Рейтинг: 9,2</p>
               </div>
             </li>
@@ -111,7 +148,7 @@
         </div>
         <div class="footer-copyright">
           <p>Website by</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="button">HTML Academy</a> 
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="html-academy-btn">HTML Academy</a> 
         </div>
       </footer>
     </div>
