@@ -389,25 +389,17 @@ a {
   width: 100%;
 }
 
-.border-wrapper {
-  width: 100%;
-  border-top: 1px solid #e5e5e5;
-}
-
-.hotels .border-wrapper:last-child {
-  border-bottom: 1px solid #e5e5e5;
-}
-
 .hotels-list {
   margin: 0;
   padding: 0;
-  width: 88%;
-  padding-left: 6%;
-  padding-right: 6%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: 100%;
 
   list-style: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.hotels .hotels-list:last-child {
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotels-list h3 {
@@ -419,6 +411,11 @@ a {
 
 .hotels-item {
   display: flex;
+  width: 88%;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .hotels-item img {
