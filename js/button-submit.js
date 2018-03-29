@@ -1,0 +1,1 @@
+document.getElementById("reservation-form").action = "https://echo.htmlacademy.ru";

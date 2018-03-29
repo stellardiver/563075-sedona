@@ -323,6 +323,12 @@ _:-ms-fullscreen, :root .price-controls label {
   border: none;
 }
 
+@supports (-ms-ime-align:auto) {
+  .price-controls input {
+  	width: 32px;
+  }
+}
+
 .range-controls {
   position: relative;
 
@@ -1088,6 +1094,13 @@ _:-ms-fullscreen, :root .adult-item label {
   padding-right: 20px;
 }
 
+@supports (-ms-ime-align:auto) {
+  .check-in-item input[type="text"],
+  .check-out-item input[type="text"] {
+  	width: 344px;
+  }
+}
+
 .find-btn {
   width: 458px;
   height: 58px;
@@ -1257,10 +1270,6 @@ _:-ms-fullscreen, :root .adult-item label {
 .social-item {
   margin-bottom: 5px;
   margin-right: 6px;
-}
-
-.social-list .social-item {
-
 }
 
 .button-social .svg-social {
