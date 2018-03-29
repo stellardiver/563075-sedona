@@ -16,6 +16,8 @@ try {
   isStorageSupport = false;
 }
 
+modal.classList.add("modal-form-hide");
+
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal.classList.toggle("modal-form-show");
