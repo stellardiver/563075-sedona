@@ -78,7 +78,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 15px 0;
 
@@ -184,12 +185,12 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+     -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+     -ms-flex-direction: column;
+         flex-direction: column;
 }
 
 .reservation-form .hotel-comforts {
@@ -285,7 +286,9 @@ fieldset .reservation-item:not(:last-child) {
   height: 22px;
 
   background: #ffffff;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 
 }
 
@@ -349,7 +352,8 @@ _:-ms-fullscreen, :root .price-controls label {
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
@@ -663,8 +667,8 @@ _:-ms-fullscreen, :root .price-controls label {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+     -ms-flex-direction: column;
+         flex-direction: column;
 }
 
 .hotels-info h3 {
@@ -711,11 +715,11 @@ _:-ms-fullscreen, :root .price-controls label {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+     -ms-flex-direction: column;
+         flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+     -ms-flex-align: end;
+   align-items: flex-end;
 }
 
 .rating-star {
@@ -758,8 +762,8 @@ _:-ms-fullscreen, :root .price-controls label {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+     -ms-flex-align: center;
+        align-items: center;
   padding-left: 6%;
   padding-right: 6%;
   padding-bottom: 8px;
@@ -785,8 +789,8 @@ _:-ms-fullscreen, :root .price-controls label {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+     -ms-flex-align: center;
+        align-items: center;
   
   font-size: 12px;
   line-height: 18px;
@@ -971,13 +975,21 @@ _:-ms-fullscreen, :root .price-controls label {
 .modal-form-show {
   display: block;
   
-  animation-name: show-up;
-  animation-duration: 0.5s;
+  -webkit-animation-name: show-up;
+  
+          animation-name: show-up;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes show-up {
+  0%   { -webkit-transform: translateY(-90px); transform: translateY(-90px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0);      }
 }
 
 @keyframes show-up {
-  0%   { transform: translateY(-90px); }
-  100% { transform: translateY(0);      }
+  0%   { -webkit-transform: translateY(-90px); transform: translateY(-90px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0);      }
 }
 
 .hotel-search-form {
@@ -1200,8 +1212,11 @@ _:-ms-fullscreen, :root .adult-item label {
   -webkit-box-pack: center;
      -ms-flex-pack: center;
    justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   font-size: 21px;
   line-height: 26px;
@@ -1221,7 +1236,8 @@ _:-ms-fullscreen, :root .adult-item label {
   -webkit-box-align: center;
      -ms-flex-align: center;
         align-items: center;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 33.333%;
 
   list-style: none;
@@ -1301,7 +1317,8 @@ _:-ms-fullscreen, :root .adult-item label {
   -webkit-box-align: center;
      -ms-flex-align: center;
         align-items: center;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 33.333%;
   margin-left: auto;
 }
