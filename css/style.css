@@ -995,8 +995,8 @@ _:-ms-fullscreen, :root .price-controls label {
   color: #000000;
 
   background-color: #ffffff;
-  -webkit-box-shadow: 0 10px 20px 0 #666666;
-          box-shadow: 0 10px 20px 0 #666666;
+  -webkit-box-shadow: 0 5px 15px 0 #999999;
+          box-shadow: 0 5px 15px 0 #999999;
 }
 
 .adult-children {
@@ -1179,8 +1179,8 @@ _:-ms-fullscreen, :root .adult-item label {
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 32px;
-  padding-bottom: 35px;
+  padding-top: 27px;
+  padding-bottom: 40px;
 }
 
 .main-footer-transparent {
@@ -1200,9 +1200,8 @@ _:-ms-fullscreen, :root .adult-item label {
   -webkit-box-pack: center;
      -ms-flex-pack: center;
    justify-content: center;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
+   align-items: center;
+   flex-wrap: wrap;
 
   font-size: 21px;
   line-height: 26px;
@@ -1235,13 +1234,17 @@ _:-ms-fullscreen, :root .adult-item label {
   vertical-align: top;
   width: 46px;
   height: 48px;
-  margin-right: 6px;
   
   background-color: #81b3d2;
 }
 
 .social-item {
   margin-bottom: 5px;
+  margin-right: 6px;
+}
+
+.social-list .social-item {
+
 }
 
 .button-social .svg-social {
@@ -1298,12 +1301,13 @@ _:-ms-fullscreen, :root .adult-item label {
   -webkit-box-align: center;
      -ms-flex-align: center;
         align-items: center;
+  flex-wrap: wrap;
   width: 33.333%;
   margin-left: auto;
 }
 
 .footer-copyright p {
-  margin-right: 8px;
+  margin-right: 9px;
   
   line-height: 26px;
   color: #000000;
